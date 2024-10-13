@@ -45,7 +45,7 @@ sharp_img = cv2.filter2D(src=image, ddepth=-1, kernel=sharpen_1)
 plot_image(sharp_img, "sharp_1", 5)
 
 sharpen_2 = np.array([[0, -1, 0],
-                    [-1, 6, -1],
+                    [-1, 7, -1],
                     [0, -1, 0]])
 sharp2_img = cv2.filter2D(src=image, ddepth=-1, kernel=sharpen_2)
 plot_image(sharp2_img, "sharp_2", 6)
@@ -66,8 +66,6 @@ def rotate_at_giving_angle(angle, position):
     rotated_image = cv2.warpAffine(src=image, M=rotate_matrix, dsize=(width, height))
 
     plot_image(rotated_image, "Rotated at angle: "+str(angle), position)
-    # cv2.imshow("rotated image",rotated_image)
-    # cv2.waitKey(0)
 
 
 rotate_at_giving_angle(45, 8)
@@ -79,13 +77,18 @@ rotate_at_giving_angle(-180, 11)
 image_size = image.size
 
 def crop_image(upper_left_pixel, width, length):
-    end_row = upper_left_pixel + length
-    end_col = upper_left_pixel + width
+    if upper_left_pixel[0] > 0 and upper_left_pixel[1] > 0 and width < image.shape[0] and length < image.shape[1]:
+        end_row = upper_left_pixel[0] + length
+        end_col = upper_left_pixel[1] + width
+        cropped_image = image[upper_left_pixel[0]:end_row, upper_left_pixel[1]:end_col]
+        plot_image(cropped_image, "cropped_image", 12)
+    else:
+        print('crop is not possible, width or length are bigger than the image_size; image_size: ', image_size)
 
-    cropped_image = image[upper_left_pixel:end_row, upper_left_pixel:end_col]
-    plot_image(cropped_image, "cropped_image", 12)
 
-crop_image(0, 500, 200)
+crop_image((100,100), 100,500)
+
+
 def draw_emoji():
     white = (255, 255, 255)
     black = (0, 0, 0)
