@@ -1,5 +1,4 @@
 import cv2
-from matplotlib import pyplot as plt
 
 def simple_averaging_grayscale(img):
     (row, col) = img.shape[0:2]

@@ -1,111 +1,79 @@
 import cv2
 import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+figure = plt.figure(figsize=(13,10))
+rows = 3
+columns = 4
 
-image = cv2.imread("lena.tif")
-# print(image)
+
+image = mpimg.imread("lena.tif")
 print("Size of the image: ", image.shape)
 print("Length of kernel: ", len(image))
 
-cv2.imshow('Original', image)
-cv2.waitKey()
-cv2.destroyAllWindows()
+def plot_image(image, title, place_of_the_image):
+    figure.add_subplot(rows, columns, place_of_the_image)
+    plt.imshow(image)
+    plt.axis('on')
+    plt.title(title)
 
+plot_image(image, "Original", 1)
 
-# blurr
-
-blurring = np.ones((11, 11), np.float32) / 121
+blurring = np.ones((8, 8), np.float32) / 25
 img = cv2.filter2D(src=image, ddepth=-1, kernel=blurring)
-
-cv2.imshow('Original', image)
-cv2.imshow('Blurred', img)
-
-cv2.waitKey()
-cv2.imwrite('lena_blured.jpg', img)
-cv2.destroyAllWindows()
+plot_image(img, "blurr_1", 2)
+# cv2.imshow('Blurred', img)
+#
+# cv2.waitKey()
+# cv2.destroyAllWindows()
 
 # blur with cv2 function
 img_blur = cv2.blur(src=image, ksize=(5, 5))
-
-cv2.imshow('Original', image)
-cv2.imshow('Blurred_with_function', img_blur)
-
-cv2.waitKey()
-cv2.imwrite('blurred_with_function.jpg', img_blur)
-cv2.destroyAllWindows()
-
+plot_image(img_blur, "blurr_2", 3)
 
 # Apply Gaussian blur
 # sigmaX is Gaussian Kernel standard deviation
 # ksize is kernel size
 gaussian_blur = cv2.GaussianBlur(src=image, ksize=(5, 5), sigmaX = 0, sigmaY = 0)
-
-cv2.imshow('Original', image)
-cv2.imshow('Gaussian Blurred', gaussian_blur)
-
-cv2.waitKey()
-cv2.imwrite('gaussian_blur.jpg', gaussian_blur)
-cv2.destroyAllWindows()
+plot_image(gaussian_blur, "blurr_3_gaussian", 4)
 
 # sharpened 1
 sharpen_1 = np.array([[0, -1, 0],
                     [-1, 5, -1],
                     [0, -1, 0]])
 sharp_img = cv2.filter2D(src=image, ddepth=-1, kernel=sharpen_1)
+plot_image(sharp_img, "sharp_1", 5)
 
-cv2.imshow('Original', image)
-cv2.imshow('Sharpened_1', sharp_img)
-
-cv2.waitKey()
-cv2.imwrite('sharp_image_1.jpg', sharp_img)
-cv2.destroyAllWindows()
-
-# sharpened 2
 sharpen_2 = np.array([[0, -1, 0],
                     [-1, 6, -1],
                     [0, -1, 0]])
 sharp2_img = cv2.filter2D(src=image, ddepth=-1, kernel=sharpen_2)
-
-cv2.imshow('Original', image)
-cv2.imshow('Sharpened_2', sharp2_img)
-
-cv2.waitKey()
-cv2.imwrite('sharp_image_2.jpg', sharp2_img)
-cv2.destroyAllWindows()
+plot_image(sharp2_img, "sharp_2", 6)
 
 # 4. Apply the filter
 filter_4 = np.array([[0, -2, 0],
                     [-2, 8, -2],
                     [0, -2, 0]])
 filter2_img = cv2.filter2D(src=image, ddepth=-1, kernel=filter_4)
-
-cv2.imshow('Original', image)
-cv2.imshow('filter_4', filter2_img)
-
-cv2.waitKey()
-cv2.imwrite('filter_4.jpg', filter2_img)
-cv2.destroyAllWindows()
+plot_image(filter2_img, "given_filter_applied", 7)
 
 # rotation
 height, width = image.shape[:2]
 center = (width / 2, height / 2)
 
-
-def rotate_at_giving_angle(angle, name_of_the_file):
+def rotate_at_giving_angle(angle, position):
     rotate_matrix = cv2.getRotationMatrix2D(center=center, angle=angle, scale=1)
     rotated_image = cv2.warpAffine(src=image, M=rotate_matrix, dsize=(width, height))
 
-    cv2.imshow('Original image', image)
-    cv2.imshow(name_of_the_file, rotated_image)
-    # wait indefinitely, press any key on keyboard to exit
-    cv2.waitKey(0)
-    # write the output, the rotated image to disk
-    cv2.imwrite(name_of_the_file + '.jpg', rotated_image)
+    plot_image(rotated_image, "Rotated at angle: "+str(angle), position)
+    # cv2.imshow("rotated image",rotated_image)
+    # cv2.waitKey(0)
 
 
-rotate_at_giving_angle(45, "rotated_at_45")
-rotate_at_giving_angle(82, "rotated_at_82")
-rotate_at_giving_angle(-82, "rotated_at_-82")
-rotate_at_giving_angle(-180, "rotated_at_-180")
+rotate_at_giving_angle(45, 8)
+rotate_at_giving_angle(82, 9)
+rotate_at_giving_angle(-82, 10)
+rotate_at_giving_angle(-180, 11)
 
 # [start_row:end_row, start_col:end_col]
 image_size = image.size
@@ -115,16 +83,7 @@ def crop_image(upper_left_pixel, width, length):
     end_col = upper_left_pixel + width
 
     cropped_image = image[upper_left_pixel:end_row, upper_left_pixel:end_col]
-
-    # Display cropped image
-    cv2.imshow("cropped", cropped_image)
-
-    # Save the cropped image
-    cv2.imwrite("Cropped Image.jpg", cropped_image)
-
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
-
+    plot_image(cropped_image, "cropped_image", 12)
 
 crop_image(0, 500, 200)
 def draw_emoji():
@@ -153,9 +112,9 @@ def draw_emoji():
     cv2.ellipse(canvas, (200, 135), (25, 10), 0, 0, 210, blue, -1)
 
     cv2.imshow("Canvas", canvas)
-
     cv2.imwrite('Feraru_Ionut_MSD1_lab1_emoji.jpg',canvas )
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
 draw_emoji()
+plt.show()
