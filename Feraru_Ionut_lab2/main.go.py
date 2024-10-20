@@ -183,4 +183,17 @@ custom_number_of_gray_shades(img, num_shades)
 # img = cv2.imread('lena.tif', cv2.IMREAD_GRAYSCALE)
 # stucki_dithering(img)
 
+def grayscale_to_rgb(img):
+    colored_image = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
+
+    (row, col) = colored_image.shape[0:2]
+    for i in range(row):
+        for j in range(col):
+            if colored_image[i,j][2] < 200:
+                colored_image[i,j] = (200,100,200)
+    plot_image(colored_image, "grayscale_to_rgb", 12)
+
+img = cv2.imread('lena.tif', cv2.IMREAD_GRAYSCALE)
+grayscale_to_rgb(img)
 plt.show()
+
