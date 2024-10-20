@@ -6,7 +6,6 @@ figure = plt.figure(figsize=(13,10))
 rows = 3
 columns = 4
 
-
 image = mpimg.imread("lena.tif")
 print("Size of the image: ", image.shape)
 print("Length of kernel: ", len(image))
@@ -19,13 +18,9 @@ def plot_image(image, title, place_of_the_image):
 
 plot_image(image, "Original", 1)
 
-blurring = np.ones((8, 8), np.float32) / 25
+blurring = np.ones((8, 8), np.float32) / 64
 img = cv2.filter2D(src=image, ddepth=-1, kernel=blurring)
 plot_image(img, "blurr_1", 2)
-# cv2.imshow('Blurred', img)
-#
-# cv2.waitKey()
-# cv2.destroyAllWindows()
 
 # blur with cv2 function
 img_blur = cv2.blur(src=image, ksize=(5, 5))
@@ -45,7 +40,7 @@ sharp_img = cv2.filter2D(src=image, ddepth=-1, kernel=sharpen_1)
 plot_image(sharp_img, "sharp_1", 5)
 
 sharpen_2 = np.array([[0, -1, 0],
-                    [-1, 7, -1],
+                    [-1, 5, -1],
                     [0, -1, 0]])
 sharp2_img = cv2.filter2D(src=image, ddepth=-1, kernel=sharpen_2)
 plot_image(sharp2_img, "sharp_2", 6)
