@@ -27,7 +27,7 @@ def weighted_average_grayscale_1(img):
     for i in range(row):
         for j in range(col):
             # weighted average
-            img[i, j] = img[i, j][0]*0.11+img[i,j][1]*0.59+img[i, j][2]*0.3
+            img[i, j] = img[i, j][2]*0.11+img[i,j][1]*0.59+img[i, j][0]*.3
     plot_image(img, "weighted_average_grayscale", 2)
 
 def weighted_average_grayscale_2(img):
@@ -88,6 +88,7 @@ decomposition_min_gray(img)
 img = cv2.imread('lena.tif')
 (B, G, R) = cv2.split(img)
 zeros = np.zeros(img.shape[:2], dtype="uint8")
+print("ZEROS : ", zeros)
 red = cv2.merge([zeros, zeros, R])
 green= cv2.merge([zeros, G, zeros])
 blue= cv2.merge([B, zeros, zeros])
@@ -104,9 +105,10 @@ def custom_number_of_gray_shades(img, num_shades):
     print("NUM OF SHADES: ", num_shades)
 
     p = max(1, min(255, num_shades))
-    interval = 256 // p
+    # interval = 256 // p
+    interval = sum(range(0, p)) // p
 
-    lookup_table = np.zeros(256, np.uint8)
+    lookup_table = np.zeros(256, np.uint16)
 
     for i in range(p):
         start = i * interval
@@ -177,11 +179,11 @@ img = cv2.imread('lena.tif')
 num_shades = random.randint(1, 255)
 custom_number_of_gray_shades(img, num_shades)
 
-# img = cv2.imread('lena.tif', cv2.IMREAD_GRAYSCALE)
-# floyd_steinberg_dithering(img)
-#
-# img = cv2.imread('lena.tif', cv2.IMREAD_GRAYSCALE)
-# stucki_dithering(img)
+img = cv2.imread('lena.tif', cv2.IMREAD_GRAYSCALE)
+floyd_steinberg_dithering(img)
+
+img = cv2.imread('lena.tif', cv2.IMREAD_GRAYSCALE)
+stucki_dithering(img)
 
 def grayscale_to_rgb(img):
     colored_image = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
@@ -189,7 +191,7 @@ def grayscale_to_rgb(img):
     (row, col) = colored_image.shape[0:2]
     for i in range(row):
         for j in range(col):
-            if colored_image[i,j][2] < 200:
+            if colored_image[i,j][2] < 100:
                 colored_image[i,j] = (200,100,200)
     plot_image(colored_image, "grayscale_to_rgb", 12)
 
