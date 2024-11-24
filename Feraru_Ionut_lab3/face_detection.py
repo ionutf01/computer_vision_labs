@@ -20,16 +20,16 @@ def detect_skin_pixels_3(image, position):
 
 # Detect faces using the YCbCr skin detection method
 image = cv2.imread('Pratheepan_Dataset/FacePhoto/m(01-32)_gr.jpg')
-cv2.imshow('Original', image)
+# cv2.imshow('Original', image)
 
 skin_image = detect_skin_pixels_3(image, 1)
-cv2.imshow('skin_image', skin_image)
+# cv2.imshow('skin_image', skin_image)
 
 gray_skin_image = cv2.cvtColor(skin_image, cv2.COLOR_BGR2GRAY)
-cv2.imshow('gray_skin_image', gray_skin_image)
+# cv2.imshow('gray_skin_image', gray_skin_image)
 
 binary_skin_image = cv2.inRange(gray_skin_image, 127, 255)
-cv2.imshow('binary_skin_image', binary_skin_image)
+# cv2.imshow('binary_skin_image', binary_skin_image)
 
 contours, _ = cv2.findContours(binary_skin_image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 for contour in contours:

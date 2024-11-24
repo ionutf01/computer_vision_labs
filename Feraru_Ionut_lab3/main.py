@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 # figure = plt.figure(figsize=(13,10))
 # rows = 3
 # columns = 4
-
+#
 # def plot_image(image, title, place_of_the_image):
 #     figure.add_subplot(rows, columns, place_of_the_image)
 #     plt.imshow(image)
@@ -17,9 +17,9 @@ def detect_skin_pixels_1(image, position):
     (row, col) = image.shape[0:2]
     for i in range(row):
         for j in range(col):
-            r = image[i, j][0]
+            b = image[i, j][0]
             g = image[i, j][1]
-            b = image[i, j][2]
+            r = image[i, j][2]
             if r > 95 and g > 40 and b > 20 and max(r, g, b) - min(r, g, b) > 15 and abs(r - g) > 15 and r > g and r > b:
                 skin_image[i, j] = (255, 255, 255)
             else:
@@ -78,11 +78,6 @@ def detect_skin_pixels_3(image, position):
 #     detect_skin_pixels_3(image, i)
 # plt.show()
 
-# evaluate these methods by comparing the results with the ground truth images
-# 1. Load the ground truth image and the skin image
-# 2. Convert the ground truth image to a binary image
-# 3. compute and display the confusion matrix and the accuracy of the skin detection method
-
 def evaluate_skin_detection(image, ground_truth_image):
     skin_image = detect_skin_pixels_3(image, 1)
 
@@ -121,10 +116,6 @@ ground_truth_files = os.listdir('Ground_Truth/GroundT_FamilyPhoto')
 #     ground_truth_image = f'Ground_Truth/GroundT_FamilyPhoto/{ground_truth_file}'
 #     print(f'Ground_Truth/GroundT_FacePhoto/{ground_truth_file}')
 #     evaluate_skin_detection(image, ground_truth_image)
-
-accuracies_1 = []
-accuracies_2 = []
-accuracies_3 = []
 
 with open('accuracy_results_1_family.txt', 'r') as f:
     accuracies_1 = [float(line.split(': ')[1]) for line in f.readlines()]
