@@ -1,0 +1,45 @@
+Image name: text.png
+Matched: 87.5
+
+Image name: ocr-test.png
+Matched: 83.07692307692308
+
+Image name: sample21.jpg
+Matched: 22.5
+
+Image name: text.png
+Matched: 87.5
+
+Image name: ocr-test.png
+Matched: 83.07692307692308
+
+Image name: sample21.jpg
+Matched: 22.5
+
+Image name: text.png
+Matched: 87.5
+
+Image name: ocr-test.png
+Matched: 83.07692307692308
+
+Image name: sample21.jpg
+Matched: 22.5
+
+Image name: text.png
+Matched: 87.5
+
+Image name: ocr-test.png
+Matched: 83.07692307692308
+
+Image name: sample21.jpg
+Matched: 22.5
+
+Image name: text.png
+Matched: 87.5
+
+Image name: ocr-test.png
+Matched: 83.07692307692308
+
+Image name: sample21.jpg
+Matched: 22.5
+

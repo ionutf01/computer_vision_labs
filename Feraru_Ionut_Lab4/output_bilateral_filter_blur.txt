@@ -1,0 +1,63 @@
+Image name: text.png
+Matched: 100.0
+
+Image name: ocr-test.png
+Matched: 100.0
+
+Image name: sample21.jpg
+Matched: 74.54545454545455
+
+Image name: text.png
+Matched: 100.0
+
+Image name: ocr-test.png
+Matched: 100.0
+
+Image name: sample21.jpg
+Matched: 74.54545454545455
+
+Image name: text.png
+Matched: 100.0
+
+Image name: ocr-test.png
+Matched: 100.0
+
+Image name: sample21.jpg
+Matched: 74.54545454545455
+
+Image name: text.png
+Matched: 100.0
+
+Image name: ocr-test.png
+Matched: 100.0
+
+Image name: sample21.jpg
+Matched: 74.54545454545455
+
+Image name: text.png
+Matched: 100.0
+
+Image name: ocr-test.png
+Matched: 100.0
+
+Image name: sample21.jpg
+Matched: 74.54545454545455
+
+Image name: text.png
+Matched: 100.0
+
+Image name: ocr-test.png
+Matched: 100.0
+
+Image name: sample21.jpg
+Matched: 74.54545454545455
+
+Image name: text.png
+Matched: 100.0
+
+Image name: ocr-test.png
+Matched: 100.0
+
+Image name: sample21.jpg
+Matched: 74.54545454545455
+

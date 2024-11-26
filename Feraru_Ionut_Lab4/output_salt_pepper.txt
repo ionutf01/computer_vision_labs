@@ -1,3 +1,187 @@
 Salt and Pepper Noise:  
 
 Matched: False
+Image name: text.png
+Amount: 0.01
+Matched: 100.0
+
+Image name: text.png
+Amount: 0.01
+Matched: 84.61538461538461
+
+Image name: ocr-test.png
+Amount: 0.01
+Matched: 68.4931506849315
+
+Image name: sample21.jpg
+Amount: 0.01
+Matched: 33.75
+
+Image name: text.png
+Amount: 0.01
+Matched: 80.0
+
+Image name: ocr-test.png
+Amount: 0.01
+Matched: 82.08955223880598
+
+Image name: sample21.jpg
+Amount: 0.01
+Matched: 31.25
+
+Image name: text.png
+Amount: 0.01
+Matched: 92.0
+
+Image name: ocr-test.png
+Amount: 0.01
+Matched: 65.75342465753424
+
+Image name: sample21.jpg
+Amount: 0.01
+Matched: 33.33333333333333
+
+Image name: text.png
+Amount: 0.01
+Matched: 80.76923076923077
+
+Image name: ocr-test.png
+Amount: 0.01
+Matched: 87.5
+
+Image name: sample21.jpg
+Amount: 0.01
+Matched: 32.91139240506329
+
+Image name: text.png
+Amount: 0.01
+Matched: 84.0
+
+Image name: ocr-test.png
+Amount: 0.01
+Matched: 79.1044776119403
+
+Image name: sample21.jpg
+Amount: 0.01
+Matched: 28.915662650602407
+
+Image name: text.png
+Amount: 0.01
+Matched: 100.0
+
+Image name: ocr-test.png
+Amount: 0.01
+Matched: 78.26086956521739
+
+Image name: sample21.jpg
+Amount: 0.01
+Matched: 28.749999999999996
+
+Image name: text.png
+Amount: 0.01
+Matched: 88.0
+
+Image name: ocr-test.png
+Amount: 0.01
+Matched: 64.1025641025641
+
+Image name: sample21.jpg
+Amount: 0.01
+Matched: 36.84210526315789
+
+Image name: text.png
+Amount: 0.01
+Matched: 100.0
+
+Image name: ocr-test.png
+Amount: 0.01
+Matched: 68.91891891891892
+
+Image name: sample21.jpg
+Amount: 0.01
+Matched: 43.83561643835616
+
+Image name: text.png
+Amount: 0.01
+Matched: 91.66666666666666
+
+Image name: ocr-test.png
+Amount: 0.01
+Matched: 74.28571428571429
+
+Image name: sample21.jpg
+Amount: 0.01
+Matched: 41.55844155844156
+
+Image name: text.png
+Amount: 0.01
+Matched: 87.5
+
+Image name: ocr-test.png
+Amount: 0.01
+Matched: 68.4931506849315
+
+Image name: sample21.jpg
+Amount: 0.01
+Matched: 24.390243902439025
+
+Image name: text.png
+Amount: 0.01
+Matched: 88.0
+
+Image name: ocr-test.png
+Amount: 0.01
+Matched: 75.36231884057972
+
+Image name: sample21.jpg
+Amount: 0.01
+Matched: 30.952380952380953
+
+Image name: text.png
+Amount: 0.01
+Matched: 95.83333333333334
+
+Image name: ocr-test.png
+Amount: 0.01
+Matched: 70.83333333333334
+
+Image name: sample21.jpg
+Amount: 0.01
+Matched: 34.61538461538461
+
+Image name: text.png
+Amount: 0.01
+Matched: 95.83333333333334
+
+Image name: ocr-test.png
+Amount: 0.01
+Matched: 76.05633802816901
+
+Image name: sample21.jpg
+Amount: 0.01
+Matched: 33.33333333333333
+
+Image name: text.png
+Amount: 0.01
+Matched: 95.83333333333334
+
+Image name: ocr-test.png
+Amount: 0.01
+Matched: 72.85714285714285
+
+Image name: sample21.jpg
+Amount: 0.01
+Matched: 26.666666666666668
+
+Image name: text.png
+Amount: 0.01
+Matched: 88.0
+
+Image name: ocr-test.png
+Amount: 0.01
+Matched: 83.33333333333334
+
+Image name: sample21.jpg
+Amount: 0.01
+Matched: 33.76623376623377
+

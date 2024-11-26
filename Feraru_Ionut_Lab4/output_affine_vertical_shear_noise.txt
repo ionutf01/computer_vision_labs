@@ -1,0 +1,129 @@
+Image name: text.png
+Matched: 13.88888888888889
+
+Image name: ocr-test.png
+Matched: 22.857142857142858
+
+Image name: sample21.jpg
+Matched: 0.0
+
+Image name: text.png
+Matched: 13.88888888888889
+
+Image name: ocr-test.png
+Matched: 22.857142857142858
+
+Image name: sample21.jpg
+Matched: 0.0
+
+Image name: text.png
+Matched: 13.88888888888889
+
+Image name: ocr-test.png
+Matched: 22.857142857142858
+
+Image name: sample21.jpg
+Matched: 0.0
+
+Image name: text.png
+Matched: 13.88888888888889
+
+Image name: ocr-test.png
+Matched: 22.857142857142858
+
+Image name: sample21.jpg
+Matched: 0.0
+
+Image name: text.png
+Matched: 13.88888888888889
+
+Image name: ocr-test.png
+Matched: 22.857142857142858
+
+Image name: sample21.jpg
+Matched: 0.0
+
+Image name: text.png
+Matched: 13.88888888888889
+
+Image name: ocr-test.png
+Matched: 22.857142857142858
+
+Image name: sample21.jpg
+Matched: 0.0
+
+Image name: text.png
+Matched: 13.88888888888889
+
+Image name: ocr-test.png
+Matched: 22.857142857142858
+
+Image name: sample21.jpg
+Matched: 0.0
+
+Image name: text.png
+Matched: 13.88888888888889
+
+Image name: ocr-test.png
+Matched: 22.857142857142858
+
+Image name: sample21.jpg
+Matched: 0.0
+
+Image name: text.png
+Matched: 13.88888888888889
+
+Image name: ocr-test.png
+Matched: 22.857142857142858
+
+Image name: sample21.jpg
+Matched: 0.0
+
+Image name: text.png
+Matched: 13.88888888888889
+
+Image name: ocr-test.png
+Matched: 22.857142857142858
+
+Image name: sample21.jpg
+Matched: 0.0
+
+Image name: text.png
+Matched: 13.88888888888889
+
+Image name: text.png
+Matched: 13.88888888888889
+
+Image name: ocr-test.png
+Matched: 22.857142857142858
+
+Image name: sample21.jpg
+Matched: 0.0
+
+Image name: text.png
+Matched: 13.88888888888889
+
+Image name: ocr-test.png
+Matched: 22.857142857142858
+
+Image name: sample21.jpg
+Matched: 0.0
+
+Image name: text.png
+Matched: 13.88888888888889
+
+Image name: ocr-test.png
+Matched: 22.857142857142858
+
+Image name: sample21.jpg
+Matched: 0.0
+
+Image name: text.png
+Matched: 13.88888888888889
+
+Image name: ocr-test.png
+Matched: 22.857142857142858
+
+Image name: sample21.jpg
+Matched: 0.0
+
